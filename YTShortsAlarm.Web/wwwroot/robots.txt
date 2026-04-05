@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ytshortsalarm.kardsen.com/sitemap.xml

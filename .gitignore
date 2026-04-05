@@ -1,0 +1,40 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+*.exe
+
+# Visual Studio
+.vs/
+*.sln.docstates
+
+# Rider
+.idea/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Publish output
+publish/
+
+# User-specific files
+*.rsuser
+launchSettings.json
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# OS generated files
+Thumbs.db
+.DS_Store

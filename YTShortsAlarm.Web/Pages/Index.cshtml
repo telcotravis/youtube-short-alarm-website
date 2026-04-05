@@ -1,0 +1,282 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Wake Up to YouTube Shorts";
+}
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-3 fw-bold mb-3">
+                    Wake up to your favorite <span class="text-accent">YouTube Shorts</span>
+                </h1>
+                <p class="lead mb-4 text-muted-brand">
+                    YT Shorts Alarm plays the latest Short from any YouTube channel as your alarm. No more boring beeps.
+                </p>
+                <span class="badge bg-warning text-dark fs-6 px-3 py-2 mb-4 d-inline-block">Coming Soon on Google Play</span>
+
+                <form method="post" asp-page-handler="Signup" class="signup-form">
+                    <div class="input-group">
+                        <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
+                        <button type="submit" class="btn btn-cta">Notify Me</button>
+                    </div>
+                    <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                </form>
+
+            </div>
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <img src="~/images/hero-banner.jpg" alt="YT Shorts Alarm — your morning, powered by fresh video" class="img-fluid rounded-4 shadow-lg" loading="eager" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how-it-works">
+    <div class="container">
+        <h2 class="section-title text-center">How It Works<span class="accent-dot">.</span></h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="step-card feature-card">
+                    <div class="step-number">1</div>
+                    <div class="feature-icon" aria-hidden="true">📺</div>
+                    <h5 class="fw-bold">Pick a channel</h5>
+                    <p class="text-muted-brand">Enter a YouTube @@handle, channel URL, or channel ID. Each alarm can have its own channel.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card feature-card">
+                    <div class="step-number">2</div>
+                    <div class="feature-icon" aria-hidden="true">⏰</div>
+                    <h5 class="fw-bold">Set your alarm</h5>
+                    <p class="text-muted-brand">Choose the time, select which days, and fine-tune playback settings like volume, replays, and rising volume.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card feature-card">
+                    <div class="step-number">3</div>
+                    <div class="feature-icon" aria-hidden="true">🌅</div>
+                    <h5 class="fw-bold">Wake up inspired</h5>
+                    <p class="text-muted-brand">When your alarm fires, the latest Short plays full-screen — even over your lock screen. Snooze for 5 minutes or dismiss.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features">
+    <div class="container">
+        <h2 class="section-title text-center">Features<span class="accent-dot">.</span></h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎯</div>
+                    <h5 class="fw-bold">Smart Video Selection</h5>
+                    <p class="text-muted-brand mb-0">Automatically finds the newest embeddable Short from your chosen channel.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⚙️</div>
+                    <h5 class="fw-bold">Per-Alarm Customization</h5>
+                    <p class="text-muted-brand mb-0">Different channel, volume, replays, and duration for each alarm.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🔒</div>
+                    <h5 class="fw-bold">Reliable Delivery</h5>
+                    <p class="text-muted-brand mb-0">Uses Android's exact alarm API — survives Doze mode and reboots.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🔊</div>
+                    <h5 class="fw-bold">Rising Volume</h5>
+                    <p class="text-muted-brand mb-0">Gentle wake-up: volume ramps from whisper to full over 30 seconds.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">📋</div>
+                    <h5 class="fw-bold">Playlist Mode</h5>
+                    <p class="text-muted-brand mb-0">Play multiple Shorts in sequence — skip blocked videos automatically.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🛡️</div>
+                    <h5 class="fw-bold">Privacy First</h5>
+                    <p class="text-muted-brand mb-0">No accounts. No tracking. No ads. All data stays on your device.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SCREENSHOTS ===== -->
+<section id="screenshots">
+    <div class="container">
+        <h2 class="section-title text-center">See It in Action<span class="accent-dot">.</span></h2>
+        <div class="screenshot-scroll">
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/8f0b78a0-fe86-4c0b-a752-a8ae032a2c37.jpg" alt="Alarm dashboard showing multiple alarms with schedules and toggle switches" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Alarm Dashboard</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/9e3068f7-f766-47be-a5f6-c990550d50f3.jpg" alt="Dashboard with alarm history expanded showing recent alarm events" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Alarm History</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/8292edfd-aeb8-497f-a83a-79d1b5d5ebb2.jpg" alt="Edit alarm screen with time picker, day selection, and test alarm button" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/c54a5e6b-a0d4-440e-9a8d-106e075ea5c1.jpg" alt="Playback overrides with channel, replays, duration, volume, and vibration settings" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Playback Overrides</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/639f8550-04c7-49c4-8454-264682b69d27.jpg" alt="Settings screen showing permissions status, export and import options" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Settings</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/2b70db17-bc2d-4e69-b207-e891480abab1.jpg" alt="Alarm playing screen with YouTube Short video, snooze and dismiss buttons" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TECH HIGHLIGHTS ===== -->
+<section id="tech">
+    <div class="container text-center">
+        <h2 class="section-title">Built Right<span class="accent-dot">.</span></h2>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "48+ Unit Tests", "Zero Tracking SDKs" })
+            {
+                <span class="tech-badge">@badge</span>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+    <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions<span class="accent-dot">.</span></h2>
+        <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                        Is YT Shorts Alarm free?
+                    </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, completely free. No ads, no subscriptions, no in-app purchases.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        What happens if I have no internet when the alarm fires?
+                    </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">The app falls back to your device's default alarm tone within 15 seconds. Your alarm always goes off.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                        Does it work with any YouTube channel?
+                    </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes — enter a @@handle, channel URL, or channel ID. The app finds the latest embeddable Short-style video.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        Will my alarm go off after a reboot?
+                    </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. All alarms are rescheduled automatically after your device restarts.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                        Does the app drain my battery?
+                    </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">No. The app does nothing between alarms. It uses Android's native AlarmManager which is battery-optimized.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                        Why does the app need so many permissions?
+                    </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Each permission is essential for alarm reliability: exact timing, waking the screen, surviving battery optimization, and showing notifications.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section id="download" class="py-5">
+    <div class="container text-center py-5">
+        <h2 class="display-5 fw-bold mb-4">Ready to wake up differently?</h2>
+
+        <form method="post" asp-page-handler="Signup" class="signup-form mx-auto">
+            <div class="input-group">
+                <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
+                <button type="submit" class="btn btn-cta">Notify Me</button>
+            </div>
+            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+        </form>
+
+        @if (TempData["SignupMessage"] != null)
+        {
+            <div class="alert alert-success alert-signup mx-auto mt-3" role="alert">@TempData["SignupMessage"]</div>
+        }
+        @if (TempData["SignupError"] != null)
+        {
+            <div class="alert alert-danger alert-signup mx-auto mt-3" role="alert">@TempData["SignupError"]</div>
+        }
+
+        <p class="text-muted-brand mt-4">Free. No ads. No tracking. No account required.</p>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
