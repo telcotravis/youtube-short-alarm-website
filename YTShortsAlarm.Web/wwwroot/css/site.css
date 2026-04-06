@@ -45,6 +45,11 @@ section {
     color: var(--color-seed) !important;
 }
 
+/* Pro badge */
+.bg-accent-subtle {
+    background-color: rgba(232, 167, 106, 0.15) !important;
+}
+
 /* Muted text */
 .text-muted-brand {
     color: var(--color-text-muted) !important;
