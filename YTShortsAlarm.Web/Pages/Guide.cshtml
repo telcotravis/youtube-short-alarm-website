@@ -1,0 +1,251 @@
+@page
+@model GuideModel
+@{
+    ViewData["Title"] = "User Guide";
+}
+
+<div class="container py-5" style="max-width: 800px;">
+    <h1 class="mb-3">User Guide</h1>
+    <p class="text-muted-brand mb-4">Everything you need to know about setting up and using <span class="text-accent">YT Shorts Alarm</span>.</p>
+
+    <hr class="my-4" />
+
+    <div class="accordion" id="guideAccordion">
+
+        <!-- 1. Getting Started -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#guideGettingStarted" aria-expanded="true" aria-controls="guideGettingStarted">
+                    🚀 Getting Started
+                </button>
+            </h2>
+            <div id="guideGettingStarted" class="accordion-collapse collapse show" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <p>Getting started is simple — just enter a YouTube channel in the <strong>Channel</strong> field on the <strong>Settings</strong> screen. You can use any of these formats:</p>
+                    <ul>
+                        <li><code>@@handle</code> — e.g. <code>@@MrBeast</code></li>
+                        <li>Full channel URL</li>
+                        <li>Channel ID</li>
+                    </ul>
+                    <p>The app finds the <strong>latest embeddable Short</strong> from that channel and plays it when your alarm fires.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Creating & Managing Alarms -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guideAlarms" aria-expanded="false" aria-controls="guideAlarms">
+                    ⏰ Creating &amp; Managing Alarms
+                </button>
+            </h2>
+            <div id="guideAlarms" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Tap <strong>+</strong> on the dashboard to create a new alarm.</li>
+                        <li>Set the <strong>time</strong> and select which <strong>days</strong> it should repeat.</li>
+                        <li>Toggle alarms <strong>on/off</strong> directly from the dashboard.</li>
+                        <li>View <strong>alarm history</strong> from the dashboard to see when alarms fired and which videos played.</li>
+                    </ul>
+                    <div class="feature-card mt-3 p-3">
+                        <p class="mb-1"><strong>Free users</strong> get <strong>1 alarm</strong>.</p>
+                        <p class="mb-0"><span class="badge bg-accent-subtle text-accent small">Pro</span> users get <strong>unlimited alarms</strong>.</p>
+                    </div>
+                    <p class="mt-3 text-muted-brand">If you downgrade from Pro, extra alarms are greyed out — you can still delete them but not edit or toggle them.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Global Playback Settings -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guideSettings" aria-expanded="false" aria-controls="guideSettings">
+                    🎛️ Global Playback Settings
+                </button>
+            </h2>
+            <div id="guideSettings" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <p>These defaults apply to <strong>all alarms</strong> unless overridden. You'll find them in the <strong>Settings</strong> screen.</p>
+                    <table class="table table-borderless mb-0">
+                        <tbody>
+                            <tr>
+                                <td><strong>Channel</strong></td>
+                                <td>The YouTube channel to pull Shorts from <span class="text-accent">(required)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max Duration</strong></td>
+                                <td>How long each video plays before moving on (10–610s, or unlimited). <span class="text-muted-brand">Default: 180s</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Player Volume</strong></td>
+                                <td>Playback volume percentage, in 5% increments (0–100%). <span class="text-muted-brand">Default: 100%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max Replays</strong></td>
+                                <td>How many times a video replays if shorter than the duration (0–50). <span class="text-muted-brand">Default: 3</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Videos per Alarm</strong></td>
+                                <td>How many Shorts play in sequence before auto-dismiss (1–10). <span class="text-muted-brand">Default: 1</span>. <span class="badge bg-accent-subtle text-accent small">Pro</span> for more than 1.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vibration</strong></td>
+                                <td>Whether the phone vibrates when the alarm fires. <span class="text-muted-brand">Default: on</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rising Volume</strong></td>
+                                <td>Starts quiet and ramps to full volume over 30 seconds. <span class="text-muted-brand">Default: off</span>. <span class="badge bg-accent-subtle text-accent small">Pro</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Per-Alarm Overrides (Pro) -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guideOverrides" aria-expanded="false" aria-controls="guideOverrides">
+                    🎯 Per-Alarm Overrides <span class="badge bg-accent-subtle text-accent small ms-2">Pro</span>
+                </button>
+            </h2>
+            <div id="guideOverrides" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <p>Each alarm has a <strong>"Playback Overrides"</strong> section in the alarm editor. This is the key to making each alarm unique.</p>
+
+                    <h3 class="h6 mt-3 text-accent">How it works</h3>
+                    <ul>
+                        <li>Every setting has a <strong>"Default" checkbox</strong> next to it.</li>
+                        <li>When <strong>Default is checked</strong> (the default state): the alarm uses the global setting from Settings. The slider/toggle is greyed out and shows the current global value for reference.</li>
+                        <li>When <strong>Default is unchecked</strong>: the slider/toggle becomes active and you can set a <strong>custom value</strong> just for this alarm.</li>
+                    </ul>
+
+                    <div class="feature-card mt-3 p-3">
+                        <p class="mb-1"><strong>Example:</strong> You could have one alarm that plays at <strong>50% volume</strong> with <strong>1 replay</strong>, and another at <strong>100% volume</strong> with <strong>5 replays</strong>.</p>
+                    </div>
+
+                    <h3 class="h6 mt-4 text-accent">What you can override per alarm</h3>
+                    <ul>
+                        <li><strong>Channel</strong> — play from a different channel than the global default</li>
+                        <li><strong>Specific video URL</strong> — always play a particular Short</li>
+                        <li><strong>Max Duration</strong>, <strong>Player Volume</strong>, <strong>Max Replays</strong></li>
+                        <li><strong>Videos per Alarm</strong>, <strong>Vibration</strong>, <strong>Rising Volume</strong></li>
+                    </ul>
+                    <p class="text-muted-brand mt-3">The header shows <strong>"Playback Overrides (customized)"</strong> when any setting is overridden. The override section automatically expands when editing an alarm that has custom overrides.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Pro vs Free -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guidePro" aria-expanded="false" aria-controls="guidePro">
+                    💎 Pro vs Free
+                </button>
+            </h2>
+            <div id="guidePro" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="feature-card p-3 h-100">
+                                <h3 class="h6 mb-3">Free</h3>
+                                <ul class="mb-0">
+                                    <li>1 alarm</li>
+                                    <li>Global settings only</li>
+                                    <li>Max 2 replays</li>
+                                    <li>1 video per alarm</li>
+                                    <li>No rising volume</li>
+                                    <li>No import/export</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card p-3 h-100" style="border-color: var(--color-cta);">
+                                <h3 class="h6 mb-3"><span class="badge bg-accent-subtle text-accent small">Pro</span> — $4.99 one-time</h3>
+                                <ul class="mb-0">
+                                    <li>Unlimited alarms</li>
+                                    <li>Full per-alarm overrides</li>
+                                    <li>Rising volume</li>
+                                    <li>Up to 10 videos per alarm</li>
+                                    <li>Up to 50 replays</li>
+                                    <li>Per-alarm channel &amp; video URL overrides</li>
+                                    <li>Import/export configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Permissions -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guidePermissions" aria-expanded="false" aria-controls="guidePermissions">
+                    🔒 Permissions
+                </button>
+            </h2>
+            <div id="guidePermissions" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <p>The app requests only the permissions it needs to work reliably as an alarm clock.</p>
+                    <table class="table table-borderless mb-0">
+                        <tbody>
+                            <tr>
+                                <td><strong>Exact Alarms</strong></td>
+                                <td>Required for alarms to fire at the exact time you set.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Display Over Other Apps</strong></td>
+                                <td>Needed to show alarms over the lock screen.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Do Not Disturb Override</strong></td>
+                                <td>Ensures alarms sound even in DND mode.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Notifications</strong></td>
+                                <td>Shows an ongoing notification when an alarm is firing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internet</strong></td>
+                                <td>Fetches the latest Short from YouTube when the alarm fires.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Troubleshooting -->
+        <div class="accordion-item mb-3 rounded overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guideTroubleshooting" aria-expanded="false" aria-controls="guideTroubleshooting">
+                    🛠️ Troubleshooting
+                </button>
+            </h2>
+            <div id="guideTroubleshooting" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                <div class="accordion-body">
+                    <h3 class="h6 text-accent">No internet when the alarm fires</h3>
+                    <p>The app falls back to your device's default alarm tone within 15 seconds. Your alarm always goes off.</p>
+
+                    <h3 class="h6 text-accent">Alarm doesn't fire after reboot</h3>
+                    <p>All alarms are automatically rescheduled after a restart. Make sure the app has the <strong>Exact Alarms</strong> permission enabled.</p>
+
+                    <h3 class="h6 text-accent">Video is blocked or unavailable</h3>
+                    <p>The app automatically skips to the next newest Short from the channel. <span class="badge bg-accent-subtle text-accent small">Pro</span> users benefit from a backup playlist for seamless playback.</p>
+
+                    <h3 class="h6 text-accent">Alarm doesn't show over lock screen</h3>
+                    <p>Make sure <strong>"Display Over Other Apps"</strong> permission is granted in Settings → Permissions.</p>
+
+                    <h3 class="h6 text-accent">Alarm is silent in DND mode</h3>
+                    <p class="mb-0">Grant the <strong>"Do Not Disturb Override"</strong> permission in Settings → Permissions.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="my-4" />
+
+    <p class="text-muted-brand">Still have questions? Reach out at <a href="mailto:support@kardsen.com">support@kardsen.com</a>.</p>
+</div>

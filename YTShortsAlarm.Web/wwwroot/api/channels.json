@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "channels": [
+    {
+      "id": "promo-1",
+      "title": "Kardsen BrickHouse",
+      "channelInput": "@KardsenBrickHouse",
+      "rank": 1,
+      "group": "promotional"
+    }
+  ],
+  "videos": []
+}
