@@ -53,6 +53,17 @@ public class WaitlistModel : PageModel
         return File(Encoding.UTF8.GetBytes(sb.ToString()), "text/csv", "waitlist.csv");
     }
 
+    public async Task<IActionResult> OnPostClearAllAsync(string? key, CancellationToken ct)
+    {
+        if (!IsValidKey(key))
+            return NotFound();
+
+        _db.WaitlistEntries.RemoveRange(_db.WaitlistEntries);
+        await _db.SaveChangesAsync(ct);
+
+        return RedirectToPage(new { key });
+    }
+
     private bool IsValidKey(string? key)
     {
         var expected = _config["AdminKey"];

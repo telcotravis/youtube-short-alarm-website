@@ -17,7 +17,16 @@
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Waitlist Signups <span class="badge bg-primary">@Model.Entries.Count</span></h1>
-        <a href="/admin/waitlist?key=@Model.Key&handler=ExportCsv" class="btn btn-outline-light">Export CSV</a>
+        <div>
+            <a href="/admin/waitlist?key=@Model.Key&handler=ExportCsv" class="btn btn-outline-light me-2">Export CSV</a>
+            @if (Model.Entries.Count > 0)
+            {
+                <form method="post" asp-page-handler="ClearAll" class="d-inline" onsubmit="return confirm('Are you sure you want to delete all @Model.Entries.Count waitlist entries? This cannot be undone.');">
+                    <input type="hidden" name="key" value="@Model.Key" />
+                    <button type="submit" class="btn btn-outline-danger">Clear Waitlist</button>
+                </form>
+            }
+        </div>
     </div>
 
     @if (Model.Entries.Count == 0)

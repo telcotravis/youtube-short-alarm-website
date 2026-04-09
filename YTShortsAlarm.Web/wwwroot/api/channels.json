@@ -9,5 +9,48 @@
       "group": "promotional"
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "id": "video-1",
+      "title": "Wakie Wakie",
+      "videoUrl": "https://www.youtube.com/shorts/G5Cxt_b39u8",
+      "rank": 1,
+      "group": "wake-up"
+    },
+    {
+      "id": "video-2",
+      "title": "Brrr Wake Up",
+      "videoUrl": "https://www.youtube.com/shorts/2WxlAqbutu0",
+      "rank": 2,
+      "group": "wake-up"
+    },
+    {
+      "id": "video-3",
+      "title": "Pajama Man (Short)",
+      "videoUrl": "https://www.youtube.com/watch?v=enYdAxVcNZA",
+      "rank": 3,
+      "group": "wake-up"
+    },
+    {
+      "id": "video-4",
+      "title": "Pajama Man (Long)",
+      "videoUrl": "https://youtu.be/Nkx1hWs88Ek",
+      "rank": 4,
+      "group": "wake-up"
+    },
+    {
+      "id": "video-5",
+      "title": "Katseye Wake Up",
+      "videoUrl": "https://www.youtube.com/shorts/oj9tkQYTza8",
+      "rank": 5,
+      "group": "wake-up"
+    },
+    {
+      "id": "video-6",
+      "title": "Time to wake up",
+      "videoUrl": "https://youtu.be/nApbdM6mjlM",
+      "rank": 6,
+      "group": "wake-up"
+    }
+  ]
 }
