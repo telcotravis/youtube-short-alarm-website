@@ -109,7 +109,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true">�</div>
-                    <h5 class="fw-bold">Interval Scheduling</h5>
+                    <h5 class="fw-bold">Interval Scheduling <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
                     <p class="text-muted-brand mb-0">Schedule alarms every X days from a start date — perfect for reminders that don't follow a weekly pattern.</p>
                 </div>
             </div>
@@ -121,8 +121,34 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
+                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">🎬</div>
+                    <h5 class="fw-bold">Specific Video <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">Paste a YouTube URL to wake up to an exact video instead of a random Short from the channel.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">💡</div>
+                    <div class="feature-icon" aria-hidden="true">👆</div>
+                    <h5 class="fw-bold">Swipe Gestures</h5>
+                    <p class="text-muted-brand mb-0">Swipe down to dismiss, swipe left to snooze — fast controls when you're half asleep.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🧪</div>
+                    <h5 class="fw-bold">Test Alarm</h5>
+                    <p class="text-muted-brand mb-0">Preview the full alarm experience before you rely on it — test from settings anytime.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">☁️</div>
+                    <h5 class="fw-bold">Auto Backup</h5>
+                    <p class="text-muted-brand mb-0">Alarms and settings are backed up automatically via Android. Reinstall and pick up where you left off.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">💡</div>
                     <h5 class="fw-bold">Channel Suggestions</h5>
                     <p class="text-muted-brand mb-0">Not sure which channel to pick? Curated suggestions help you discover great wake-up content.</p>
                 </div>
@@ -212,7 +238,7 @@
     <div class="container text-center">
         <h2 class="section-title">Built Right<span class="accent-dot">.</span></h2>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Interval & Weekly Scheduling", "60+ Unit Tests", "Zero Tracking SDKs" })
+            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "60+ Unit Tests", "Zero Tracking SDKs" })
             {
                 <span class="tech-badge">@badge</span>
             }
@@ -233,7 +259,7 @@
                     </button>
                 </h3>
                 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">The core app is free — one alarm with full playback, snooze, and dismiss. A one-time Pro upgrade unlocks unlimited alarms, per-alarm overrides, rising volume, playlist mode, and export/import. No ads, no subscriptions.</div>
+                    <div class="accordion-body">The core app is free — one alarm with full playback, snooze, and dismiss. A one-time Pro upgrade unlocks unlimited alarms, per-alarm overrides, interval scheduling, rising volume, playlist mode, and export/import. No ads, no subscriptions.</div>
                 </div>
             </div>
 
@@ -289,6 +315,50 @@
                 </h3>
                 <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">Each permission is essential for alarm reliability: exact timing, waking the screen, surviving battery optimization, and showing notifications.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                        Can I use a specific video instead of a random Short?
+                    </button>
+                </h3>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes — Pro users can paste a YouTube video URL directly into an alarm. The app will play that exact video instead of searching for the latest Short from a channel.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                        Will my alarms be restored if I reinstall the app?
+                    </button>
+                </h3>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. The app uses Android's automatic backup system, so your alarms and settings are restored when you reinstall. You can also manually export your configuration as a JSON file from Settings.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                        Can I test the alarm before going to sleep?
+                    </button>
+                </h3>
+                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. There's a "Test Alarm" button in Settings that launches the full alarm experience — video playback, vibration, and all — so you can verify everything works.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                        Does it work on tablets and foldables?
+                    </button>
+                </h3>
+                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. The app supports responsive layouts for large screens and adapts to foldable devices, including table-top postures.</div>
                 </div>
             </div>
 
