@@ -1,0 +1,91 @@
+@page
+@model ChangelogModel
+@{
+    ViewData["Title"] = "Changelog";
+    ViewData["MetaDescription"] = "YT Shorts Alarm version history — new features, improvements, and bug fixes for every release.";
+    ViewData["CanonicalUrl"] = "https://ytshortsalarm.kardsen.com/Changelog";
+}
+
+<div class="container py-5" style="max-width: 800px;">
+    <h1 class="mb-3">Changelog</h1>
+    <p class="text-muted-brand mb-4">Version history for <span class="text-accent">YT Shorts Alarm</span>.</p>
+
+    <hr class="my-4" />
+
+    <!-- v9 KARD -->
+    <article class="mb-5">
+        <h2 class="h4">
+            <span class="badge bg-accent-subtle text-accent me-2">v9</span> KARD
+            <small class="text-muted-brand ms-2">April 2026</small>
+        </h2>
+        <h3 class="h6 mt-3 text-accent">New Features</h3>
+        <ul>
+            <li><strong>Smart Snooze</strong> <span class="badge bg-accent-subtle text-accent small">Pro</span> — Snooze duration progressively shortens each time you snooze. Configure initial duration (1–30 min), reduction percentage (10–90%), and max snooze count.</li>
+            <li><strong>Skip Dates</strong> — Mark specific dates per alarm to skip (holidays, days off). The alarm silently skips and fires normally on other days.</li>
+            <li><strong>Streak &amp; Stats</strong> — Dashboard card showing alarm streak, weekly count, snooze rate, and average snoozes per dismiss.</li>
+            <li><strong>Swipe Gestures Toggle</strong> — New setting to enable/disable swipe-to-snooze and swipe-to-dismiss on the alarm screen. Off by default.</li>
+        </ul>
+        <h3 class="h6 mt-3 text-accent">Improvements</h3>
+        <ul>
+            <li>Max replays default increased from 3 to 50 — alarms play longer before auto-dismiss.</li>
+            <li>Snooze and dismiss buttons now on same row for easier one-handed use.</li>
+            <li>Snooze button shows exact minutes remaining.</li>
+        </ul>
+        <h3 class="h6 mt-3 text-accent">Bug Fixes</h3>
+        <ul>
+            <li>Fixed snooze button being greyed out during test alarms.</li>
+            <li>Fixed progressive snooze not reducing — snooze count now correctly passes through the full alarm intent chain.</li>
+        </ul>
+    </article>
+
+    <!-- v8 KAR -->
+    <article class="mb-5">
+        <h2 class="h4">
+            <span class="badge bg-accent-subtle text-accent me-2">v8</span> KAR
+            <small class="text-muted-brand ms-2">April 2026</small>
+        </h2>
+        <ul>
+            <li><strong>Edge-to-edge display</strong> — Full-screen alarm experience on Android 15+.</li>
+            <li><strong>Auto Backup</strong> — Alarms and settings backed up via Android's backup system.</li>
+            <li><strong>Swipe gestures</strong> — Swipe down to dismiss, left to snooze on the alarm screen.</li>
+            <li><strong>In-app updates</strong> — Prompts when a new version is available on Google Play.</li>
+            <li><strong>Clock display</strong> — Large clock shown on the alarm playing screen.</li>
+            <li>Improved notification actions during alarm playback.</li>
+        </ul>
+    </article>
+
+    <!-- v7 KA -->
+    <article class="mb-5">
+        <h2 class="h4">
+            <span class="badge bg-accent-subtle text-accent me-2">v7</span> KA
+            <small class="text-muted-brand ms-2">March 2026</small>
+        </h2>
+        <ul>
+            <li><strong>Specific video URL</strong> <span class="badge bg-accent-subtle text-accent small">Pro</span> — Paste a YouTube URL to play an exact video as your alarm.</li>
+            <li><strong>Channel suggestions</strong> — Curated dropdown of channels for great wake-up content.</li>
+            <li><strong>Video suggestions</strong> — Curated motivational video suggestions.</li>
+            <li><strong>Alarm labels</strong> — Name your alarms; labels display on the alarm screen.</li>
+            <li><strong>Interval scheduling</strong> <span class="badge bg-accent-subtle text-accent small">Pro</span> — Every X days from a start date.</li>
+            <li><strong>Per-alarm overrides</strong> <span class="badge bg-accent-subtle text-accent small">Pro</span> — Custom channel, video, volume, replays, duration per alarm.</li>
+        </ul>
+    </article>
+
+    <!-- Earlier -->
+    <article class="mb-5">
+        <h2 class="h4">
+            <span class="badge bg-accent-subtle text-accent me-2">v1–v6</span> Earlier Releases
+            <small class="text-muted-brand ms-2">2026</small>
+        </h2>
+        <ul>
+            <li>Core alarm functionality — YouTube Short playback, snooze, dismiss.</li>
+            <li>Rising volume, vibration, fallback ringtone.</li>
+            <li>Playlist mode — multiple Shorts per alarm.</li>
+            <li>Export/import configuration.</li>
+            <li>Material Design 3 theming.</li>
+            <li>Foldable and tablet support.</li>
+        </ul>
+    </article>
+
+    <hr class="my-4" />
+    <p class="text-muted-brand">Questions? Reach out at <a href="mailto:support@kardsen.com">support@kardsen.com</a>.</p>
+</div>

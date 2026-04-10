@@ -443,4 +443,85 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@@type": "Question",
+                "name": "Is YT Shorts Alarm free?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "The core app is free — one alarm with full playback, snooze, and dismiss. A one-time Pro upgrade unlocks unlimited alarms, per-alarm overrides, interval scheduling, rising volume, smart progressive snooze, playlist mode, and export/import. No ads, no subscriptions."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "What happens if I have no internet when the alarm fires?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "The app falls back to your device's default alarm tone within 15 seconds. Your alarm always goes off."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Does it work with any YouTube channel?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes — enter a @@handle, channel URL, or channel ID. The app finds the latest embeddable Short-style video."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Will my alarm go off after a reboot?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes. All alarms are rescheduled automatically after your device restarts."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Does the app drain my battery?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "No. The app does nothing between alarms. It uses Android's native AlarmManager which is battery-optimized."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Can I use a specific video instead of a random Short?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes — Pro users can paste a YouTube video URL directly into an alarm. The app will play that exact video instead of searching for the latest Short from a channel."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Will my alarms be restored if I reinstall the app?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes. The app uses Android's automatic backup system, so your alarms and settings are restored when you reinstall. You can also manually export your configuration as a JSON file from Settings."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "What is Smart Snooze?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Smart Snooze (Pro) progressively shortens your snooze time each time you hit snooze. For example, with a 10-minute starting duration and 30% reduction, your snoozes go 10, 7, 5, 3 minutes. You can configure the initial duration, reduction percentage, and maximum number of snoozes."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Can I skip alarms on holidays?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes. Each alarm has a Skip Dates option where you can mark specific dates to skip. The alarm silently skips those dates and fires normally on all other scheduled days."
+                }
+            }
+        ]
+    }
+    </script>
 }
