@@ -168,8 +168,13 @@
                     <p class="text-muted-brand mb-0">Alarms and settings are backed up automatically via Android. Reinstall and pick up where you left off.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">💡</div>
+            <div class="col-md-6 col-lg-4">                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🌙</div>
+                    <h5 class="fw-bold">Dark Mode</h5>
+                    <p class="text-muted-brand mb-0">Switch between System, Light, and Dark themes. Your preference is saved and applied instantly.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">💡</div>
                     <h5 class="fw-bold">Channel Suggestions</h5>
                     <p class="text-muted-brand mb-0">Not sure which channel to pick? Curated suggestions help you discover great wake-up content.</p>
                 </div>
@@ -189,72 +194,117 @@
 <section id="screenshots">
     <div class="container">
         <h2 class="section-title text-center">See It in Action<span class="accent-dot">.</span></h2>
-        <div class="screenshot-scroll">
+
+        <div class="theme-toggle-group d-flex justify-content-center mb-4">
+            <button type="button" class="theme-toggle-btn active" data-theme="dark" aria-pressed="true">🌙 Dark</button>
+            <button type="button" class="theme-toggle-btn" data-theme="light" aria-pressed="false">☀️ Light</button>
+        </div>
+
+        <div class="screenshot-scroll" id="screenshots-dark">
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/01-alarm-dashboard.jpg" alt="Alarm dashboard with multiple alarms, toggle switches, and next fire times" loading="lazy" />
+                    <img src="~/images/screenshots/01-dashboard-dark.png" alt="Alarm dashboard in dark mode with multiple alarms, toggle switches, next fire times, and Your Week stats" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Alarm Dashboard</p>
+                <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/02-stats-and-history.jpg" alt="Dashboard showing weekly stats card with streak, alarm count, snooze rate, average snoozes, and recent alarm history" loading="lazy" />
+                    <img src="~/images/screenshots/02-dashboard-history-dark.png" alt="Dashboard scrolled to show weekly stats card with streak, alarm count, snooze rate, and recent alarm history" loading="lazy" />
                 </div>
                 <p class="text-center text-muted-brand mt-2 small">Stats &amp; History</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/03-edit-alarm.jpg" alt="Edit alarm screen with label, time picker, day selection chips, Every X days, skip dates, and playback overrides" loading="lazy" />
+                    <img src="~/images/screenshots/07-dashboard-disabled-dark.png" alt="Dashboard with a disabled alarm dimmed to indicate it is turned off" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Disabled Alarm</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/03-edit-alarm-schedule-dark.png" alt="Edit alarm screen with label, time picker, day selection chips, Every X days, skip dates, and playback overrides sections" loading="lazy" />
                 </div>
                 <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/04-edit-alarm-overrides.jpg" alt="Edit alarm with skip dates expanded, playback overrides showing video URL and channel override fields" loading="lazy" />
+                    <img src="~/images/screenshots/04-edit-alarm-overrides-dark.png" alt="Edit alarm with skip dates expanded showing Add date button, and playback overrides with video URL, channel override, and sliders" loading="lazy" />
                 </div>
                 <p class="text-center text-muted-brand mt-2 small">Skip Dates &amp; Overrides</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/05-playback-sliders.jpg" alt="Per-alarm playback overrides with replays, videos per alarm, duration, volume, vibration, rising volume, and max snoozes sliders" loading="lazy" />
+                    <img src="~/images/screenshots/06-edit-alarm-sliders-dark.png" alt="Per-alarm playback overrides with replays, videos per alarm, duration, volume, vibration, rising volume, and max snoozes sliders" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Playback Overrides</p>
+                <p class="text-center text-muted-brand mt-2 small">Playback Controls</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/06-alarm-playing.jpg" alt="Alarm playing with YouTube Short video, notification bar, loop counter, dismiss and snooze 10 min buttons" loading="lazy" />
+                    <img src="~/images/screenshots/11-alarm-player-dark.png" alt="Alarm playing full-screen with YouTube Short video, channel name, alarm label, loop counter, retry, dismiss, and snooze buttons" loading="lazy" />
                 </div>
                 <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
             </div>
+        </div>
+
+        <div class="screenshot-scroll d-none" id="screenshots-light">
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/07-alarm-playing-clock.jpg" alt="Alarm playing with large clock display, YouTube Short video, loop counter, dismiss and snooze buttons" loading="lazy" />
+                    <img src="~/images/screenshots/12-dashboard-light.png" alt="Alarm dashboard in light mode with blue accent colors, Material 3 cards, and Your Week stats" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Alarm with Clock</p>
+                <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/08-settings-playback.jpg" alt="Settings screen with channel, max video length, player volume, max replays, videos per alarm, vibration, swipe gestures, and rising volume" loading="lazy" />
+                    <img src="~/images/screenshots/13-dashboard-disabled-light.png" alt="Dashboard in light mode with a disabled alarm dimmed to indicate it is turned off" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Disabled Alarm</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/14-edit-alarm-schedule-light.png" alt="Edit alarm screen in light mode with schedule card, day chips, skip dates, playback overrides, test and save buttons" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/15-edit-alarm-overrides-light.png" alt="Edit alarm in light mode with skip dates expanded and playback overrides showing video URL, channel override, and sliders" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Skip Dates &amp; Overrides</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/16-edit-alarm-sliders-light.png" alt="Per-alarm playback sliders in light mode with replays, videos per alarm, duration, volume, vibration, rising volume, and max snoozes" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Playback Controls</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/17-settings-playback-light.png" alt="Settings screen in light mode with channel handle, max video length, player volume, max replays, videos per alarm, vibration, and swipe gestures" loading="lazy" />
                 </div>
                 <p class="text-center text-muted-brand mt-2 small">Playback Settings</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/09-settings-snooze.jpg" alt="Settings screen with max snoozes, snooze duration, progressive snooze toggle, snooze reduction slider, and fallback alarm sound" loading="lazy" />
+                    <img src="~/images/screenshots/18-settings-snooze-light.png" alt="Settings screen with max snoozes, snooze duration, progressive snooze toggle, snooze reduction slider, and fallback alarm sound" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Smart Snooze Settings</p>
+                <p class="text-center text-muted-brand mt-2 small">Smart Snooze</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/10-settings-permissions.jpg" alt="Settings screen showing snooze reduction, fallback alarm sound, permissions status, and test alarm button" loading="lazy" />
+                    <img src="~/images/screenshots/19-settings-permissions-light.png" alt="Settings screen showing permissions status, display over other apps, and data actions including test alarm, export, and import configuration" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Permissions</p>
+                <p class="text-center text-muted-brand mt-2 small">Permissions &amp; Data</p>
             </div>
             <div class="screenshot-item">
                 <div class="phone-mockup">
-                    <img src="~/images/screenshots/11-settings-actions.jpg" alt="Settings screen showing test alarm, export and import configuration buttons, and about section with privacy links" loading="lazy" />
+                    <img src="~/images/screenshots/20-settings-theme-light.png" alt="Settings screen showing theme toggle with System, Light, and Dark options, privacy links, and app version" loading="lazy" />
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Actions &amp; About</p>
+                <p class="text-center text-muted-brand mt-2 small">Theme &amp; About</p>
+            </div>
+            <div class="screenshot-item">
+                <div class="phone-mockup">
+                    <img src="~/images/screenshots/21-alarm-player-light.png" alt="Alarm playing full-screen in light mode with YouTube Short video, dismiss and snooze buttons" loading="lazy" />
+                </div>
+                <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
             </div>
         </div>
     </div>
@@ -265,7 +315,7 @@
     <div class="container text-center">
         <h2 class="section-title">Built Right<span class="accent-dot">.</span></h2>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "Smart Snooze", "Streak & Stats", "60+ Unit Tests", "Zero Tracking SDKs" })
+            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "Smart Snooze", "Streak & Stats", "Dark Mode", "60+ Unit Tests", "Zero Tracking SDKs" })
             {
                 <span class="tech-badge">@badge</span>
             }
@@ -443,6 +493,34 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var buttons = document.querySelectorAll('.theme-toggle-btn');
+        var darkGroup = document.getElementById('screenshots-dark');
+        var lightGroup = document.getElementById('screenshots-light');
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var theme = this.getAttribute('data-theme');
+                buttons.forEach(function (b) {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
+
+                if (theme === 'dark') {
+                    darkGroup.classList.remove('d-none');
+                    lightGroup.classList.add('d-none');
+                } else {
+                    lightGroup.classList.remove('d-none');
+                    darkGroup.classList.add('d-none');
+                }
+            });
+        });
+    });
+    </script>
 
     <script type="application/ld+json">
     {
