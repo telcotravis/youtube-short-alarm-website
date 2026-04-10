@@ -1,15 +1,17 @@
 :root {
-    --color-seed: #FF6B35;
-    --color-primary: #FFB693;
-    --color-on-primary: #562100;
-    --color-secondary: #E7BDB0;
-    --color-tertiary: #D3C78D;
-    --color-surface: #1A120D;
-    --color-on-surface: #F1DFD6;
-    --color-surface-variant: #2D2019;
-    --color-cta: #FF6B35;
-    --color-cta-hover: #E55A25;
-    --color-text-muted: #9E8E84;
+    --color-seed: #1565C0;
+    --color-primary: #A5C8FF;
+    --color-on-primary: #00315E;
+    --color-primary-container: #004785;
+    --color-secondary: #BCC7DC;
+    --color-tertiary: #D9BDE4;
+    --color-surface: #111318;
+    --color-on-surface: #E1E2E9;
+    --color-surface-variant: #1D2024;
+    --color-outline: #8D9199;
+    --color-cta: #A5C8FF;
+    --color-cta-hover: #C4DAFF;
+    --color-text-muted: #8D9199;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 /* CTA button style */
 .btn-cta {
     background-color: var(--color-cta);
-    color: #fff;
+    color: var(--color-on-primary);
     border: none;
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
@@ -32,7 +34,7 @@ body {
 
 .btn-cta:hover {
     background-color: var(--color-cta-hover);
-    color: #fff;
+    color: var(--color-on-primary);
 }
 
 /* Section spacing */
@@ -47,7 +49,7 @@ section {
 
 /* Pro badge */
 .bg-accent-subtle {
-    background-color: rgba(232, 167, 106, 0.15) !important;
+    background-color: rgba(165, 200, 255, 0.15) !important;
 }
 
 /* Muted text */
@@ -57,7 +59,7 @@ section {
 
 /* Footer */
 footer {
-    background-color: #0d0906;
+    background-color: #0B0D11;
     border-top: 1px solid var(--color-surface-variant);
 }
 
@@ -128,7 +130,7 @@ footer a:hover {
     height: 48px;
     border-radius: 50%;
     background-color: var(--color-cta);
-    color: #fff;
+    color: var(--color-on-primary);
     font-weight: 700;
     font-size: 1.25rem;
     margin-bottom: 1rem;
@@ -267,7 +269,7 @@ footer a:hover {
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(165, 200, 255, 0.25);
 }
 
 .accordion-body {
@@ -276,7 +278,7 @@ footer a:hover {
 
 /* CTA section */
 #download {
-    background: linear-gradient(180deg, var(--color-surface) 0%, #0d0906 100%);
+    background: linear-gradient(180deg, var(--color-surface) 0%, #0B0D11 100%);
 }
 
 /* Email signup form */
@@ -293,7 +295,7 @@ footer a:hover {
 
 .signup-form .form-control:focus {
     border-color: var(--color-cta);
-    box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(165, 200, 255, 0.25);
 }
 
 .signup-form .form-control::placeholder {
