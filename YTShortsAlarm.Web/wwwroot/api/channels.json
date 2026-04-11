@@ -52,5 +52,14 @@
       "rank": 6,
       "group": "wake-up"
     }
+  ],
+  "sleepVideos": [
+    {
+      "id": "sleep-1",
+      "title": "Relaxing Sleep Music",
+      "videoUrl": "https://www.youtube.com/watch?v=lLSIEuJ6u8A",
+      "rank": 1,
+      "group": "sleep"
+    }
   ]
 }
