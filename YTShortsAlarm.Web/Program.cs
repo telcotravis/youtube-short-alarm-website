@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using YTShortsAlarm.Web.Data;
 
@@ -33,7 +34,30 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+
+var provider = new FileExtensionContentTypeProvider();
+provider.Mappings[".apk"] = "application/vnd.android.package-archive";
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider
+});
+
+app.MapGet("/download/apk", () =>
+{
+    var path = Path.Combine(app.Environment.WebRootPath, "app-debug.apk");
+
+    if (!File.Exists(path))
+    {
+        return Results.NotFound();
+    }
+
+    return Results.File(
+        path,
+        contentType: "application/vnd.android.package-archive",
+        fileDownloadName: "YTShortsAlarm.apk");
+});
+
 app.UseRouting();
 app.UseAntiforgery();
 app.MapRazorPages();
