@@ -163,6 +163,20 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">😴</div>
+                    <h5 class="fw-bold">Sleep Timer</h5>
+                    <p class="text-muted-brand mb-0">Fall asleep to a YouTube video with a countdown timer. Volume fades gradually and curated sleep videos are suggested.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🔓</div>
+                    <h5 class="fw-bold">Dismiss Challenges</h5>
+                    <p class="text-muted-brand mb-0">Force yourself awake with QR code scanning or shake-to-dismiss challenges. Configurable shake count from 5 to 50.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true">☁️</div>
                     <h5 class="fw-bold">Auto Backup</h5>
                     <p class="text-muted-brand mb-0">Alarms and settings are backed up automatically via Android. Reinstall and pick up where you left off.</p>
@@ -315,7 +329,7 @@
     <div class="container text-center">
         <h2 class="section-title">Built Right<span class="accent-dot">.</span></h2>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "Smart Snooze", "Streak & Stats", "Dark Mode", "60+ Unit Tests", "Zero Tracking SDKs" })
+            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "Smart Snooze", "Sleep Timer", "Dismiss Challenges", "Streak & Stats", "Dark Mode", "60+ Unit Tests", "Zero Tracking SDKs" })
             {
                 <span class="tech-badge">@badge</span>
             }
