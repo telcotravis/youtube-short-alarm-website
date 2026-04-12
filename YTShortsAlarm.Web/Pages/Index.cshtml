@@ -26,14 +26,21 @@
 
                 <span class="badge fs-6 px-3 py-2 mb-4 d-inline-block" style="background: rgba(165,200,255,0.12); color: var(--color-primary); border: 1px solid rgba(165,200,255,0.25);">Launching Soon — Get Early Access</span>
 
-                <form method="post" asp-page-handler="Signup" class="signup-form">
+                <form id="heroSignupForm" class="signup-form" onsubmit="return submitHeroForm(event)">
                     <div class="input-group">
-                        <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
+                        <input type="email" id="Hero_Email" class="form-control" placeholder="you@example.com" aria-label="Email address" required maxlength="256" />
                         <button type="submit" class="btn btn-cta">Get Early Access</button>
                     </div>
-                    <span asp-validation-for="Input.Email" class="text-danger small"></span>
                     <p class="small text-muted-brand mt-2 mb-0"><i class="lucide-lock" style="font-size: 0.85rem;"></i> No spam. One email on launch day.</p>
                 </form>
+                @if (TempData.Peek("SignupMessage") != null)
+                {
+                    <div class="alert alert-success alert-signup mt-3" role="alert">@TempData.Peek("SignupMessage")</div>
+                }
+                @if (TempData.Peek("SignupError") != null)
+                {
+                    <div class="alert alert-danger alert-signup mt-3" role="alert">@TempData.Peek("SignupError")</div>
+                }
 
             </div>
             <div class="col-lg-6 text-center mt-5 mt-lg-0">
@@ -579,6 +586,18 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        function submitHeroForm(e) {
+            e.preventDefault();
+            var email = document.getElementById('Hero_Email').value;
+            if (!email) return false;
+            var bottomInput = document.querySelector('#download input[name="Input.Email"]');
+            if (bottomInput) { bottomInput.value = email; }
+            var bottomForm = document.querySelector('#download form');
+            if (bottomForm) { bottomForm.submit(); }
+            return false;
+        }
+    </script>
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
