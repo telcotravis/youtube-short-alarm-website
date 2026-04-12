@@ -19,8 +19,9 @@
                 <ul class="hero-checks list-unstyled mt-3 mb-4">
                     <li><i class="lucide-check"></i> Auto-plays the <strong>newest Short</strong> from any channel daily</li>
                     <li><i class="lucide-check"></i> Set a <strong>specific video</strong> as your alarm</li>
-                    <li><i class="lucide-check"></i> <strong>Sleep timer</strong> for meditation &amp; ambient videos</li>
+                    <li><i class="lucide-check"></i> <strong>Multiple sleep timers</strong> for meditation &amp; ambient videos</li>
                     <li><i class="lucide-check"></i> <strong>30-day free Pro trial</strong> — all features unlocked</li>
+                    <li><i class="lucide-check"></i> Set as your <strong>default Android alarm</strong> app</li>
                     <li><i class="lucide-check"></i> Survives reboots, Doze mode &amp; battery saver</li>
                 </ul>
 
@@ -124,7 +125,7 @@
                 <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-moon-star"></i></div>
                     <h5 class="fw-bold">Sleep Timer</h5>
-                    <p class="text-muted-brand mb-0">Fall asleep to meditation, ambient, or lo-fi videos with a countdown timer. Volume fades gradually and curated sleep videos are suggested.</p>
+                    <p class="text-muted-brand mb-0">Fall asleep to meditation, ambient, or lo-fi videos. Run multiple countdown timers at once, volume fades gradually, and curated sleep videos are suggested.</p>
                 </div>
             </div>
         </div>
@@ -196,8 +197,8 @@
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-bar-chart-3"></i></div>
-                    <h5 class="fw-bold">Streak &amp; Stats</h5>
-                    <p class="text-muted-brand mb-0">Track your alarm streak, weekly count, snooze rate, and average snoozes on the dashboard.</p>
+                    <h5 class="fw-bold">Streak, Stats &amp; Badges</h5>
+                    <p class="text-muted-brand mb-0">Track your alarm streak, weekly count, snooze rate, dismiss spread, and average wake time. Earn badges for consistency milestones.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -252,6 +253,13 @@
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-lightbulb"></i></div>
                     <h5 class="fw-bold">Channel Suggestions</h5>
                     <p class="text-muted-brand mb-0">Not sure which channel to pick? Curated suggestions help you discover great wake-up content.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-alarm-clock-check"></i></div>
+                    <h5 class="fw-bold">Default Alarm App</h5>
+                    <p class="text-muted-brand mb-0">Set YT Shorts Alarm as your default Android alarm handler — setting alarms from the clock app or Google Assistant launches directly into the app.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -404,7 +412,7 @@
             </div>
         </div>
         <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-            @foreach (var badge in new[] { "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Foldable & Tablet Support", "Smart Snooze", "Sleep Timer", "Dismiss Challenges" })
+            @foreach (var badge in new[] { "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Foldable & Tablet Support", "Smart Snooze", "Multiple Sleep Timers", "Dismiss Challenges", "Statistics Badges", "Default Alarm Handler" })
             {
                 <span class="tech-badge">@badge</span>
             }
@@ -547,6 +555,28 @@
                 </h3>
                 <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">Yes. Each alarm has a Skip Dates option where you can mark specific dates to skip. The alarm silently skips those dates and fires normally on all other scheduled days.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13">
+                        Can I run multiple sleep timers at the same time?
+                    </button>
+                </h3>
+                <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. You can set multiple countdown timers simultaneously — each with its own duration. All active timers display on the dashboard with live countdowns, and you can cancel any of them individually.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14" aria-expanded="false" aria-controls="faq14">
+                        Can I set this as my default alarm app?
+                    </button>
+                </h3>
+                <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes. YT Shorts Alarm registers as an Android alarm handler, so when you set an alarm from the clock app or Google Assistant, it opens directly in YT Shorts Alarm.</div>
                 </div>
             </div>
 
@@ -702,6 +732,22 @@
                 "acceptedAnswer": {
                     "@@type": "Answer",
                     "text": "Yes. Each alarm has a Skip Dates option where you can mark specific dates to skip. The alarm silently skips those dates and fires normally on all other scheduled days."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Can I run multiple sleep timers at the same time?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes. You can set multiple countdown timers simultaneously — each with its own duration. All active timers display on the dashboard with live countdowns, and you can cancel any of them individually."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Can I set this as my default alarm app?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Yes. YT Shorts Alarm registers as an Android alarm handler, so when you set an alarm from the clock app or Google Assistant, it opens directly in YT Shorts Alarm."
                 }
             }
         ]

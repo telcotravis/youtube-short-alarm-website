@@ -6,7 +6,8 @@
       "title": "Kardsen BrickHouse",
       "channelInput": "@KardsenBrickHouse",
       "rank": 1,
-      "group": "promotional"
+      "group": "promotional",
+      "foulLanguage": true
     }
   ],
   "videos": [
@@ -29,14 +30,16 @@
       "title": "Pajama Man (Short)",
       "videoUrl": "https://www.youtube.com/watch?v=enYdAxVcNZA",
       "rank": 3,
-      "group": "wake-up"
+      "group": "wake-up",
+      "foulLanguage": true
     },
     {
       "id": "video-4",
       "title": "Pajama Man (Long)",
       "videoUrl": "https://youtu.be/Nkx1hWs88Ek",
       "rank": 4,
-      "group": "wake-up"
+      "group": "wake-up",
+      "foulLanguage": true
     },
     {
       "id": "video-5",
