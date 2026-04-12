@@ -15,14 +15,22 @@
                 <p class="lead mb-4 text-muted-brand">
                     YT Shorts Alarm plays the latest Short from any YouTube channel as your alarm. No more boring beeps.
                 </p>
-                <span class="badge bg-warning text-dark fs-6 px-3 py-2 mb-4 d-inline-block">Coming Soon on Google Play</span>
+
+                <ul class="hero-checks list-unstyled mt-3 mb-4">
+                    <li><i class="lucide-check"></i> Plays the latest Short from any channel</li>
+                    <li><i class="lucide-check"></i> Survives reboots, Doze mode &amp; battery saver</li>
+                    <li><i class="lucide-check"></i> Free with optional one-time Pro upgrade</li>
+                </ul>
+
+                <span class="badge fs-6 px-3 py-2 mb-4 d-inline-block" style="background: rgba(165,200,255,0.12); color: var(--color-primary); border: 1px solid rgba(165,200,255,0.25);">Launching Soon — Get Early Access</span>
 
                 <form method="post" asp-page-handler="Signup" class="signup-form">
                     <div class="input-group">
                         <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
-                        <button type="submit" class="btn btn-cta">Notify Me</button>
+                        <button type="submit" class="btn btn-cta">Get Early Access</button>
                     </div>
                     <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                    <p class="small text-muted-brand mt-2 mb-0"><i class="lucide-lock" style="font-size: 0.85rem;"></i> No spam. One email on launch day.</p>
                 </form>
 
             </div>
@@ -33,15 +41,31 @@
     </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section id="how-it-works">
+<!-- ===== SOCIAL PROOF ===== -->
+<section class="py-4">
     <div class="container">
+        <div class="social-proof-strip d-flex flex-wrap justify-content-center gap-4 align-items-center text-muted-brand small">
+            <span><i class="lucide-shield-check"></i> <strong style="color: var(--color-on-surface);">No ads, no tracking</strong></span>
+            <span class="d-none d-md-inline" style="color: var(--color-outline);">&middot;</span>
+            <span><i class="lucide-code-2"></i> <strong style="color: var(--color-on-surface);">60+ unit tests</strong></span>
+            <span class="d-none d-md-inline" style="color: var(--color-outline);">&middot;</span>
+            <span><i class="lucide-smartphone"></i> <strong style="color: var(--color-on-surface);">Material Design 3</strong></span>
+            <span class="d-none d-md-inline" style="color: var(--color-outline);">&middot;</span>
+            <span><i class="lucide-lock"></i> <strong style="color: var(--color-on-surface);">Privacy first</strong></span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how-it-works" class="reveal">
+    <div class="container">
+        <div class="section-divider"></div>
         <h2 class="section-title text-center">How It Works<span class="accent-dot">.</span></h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="step-card feature-card">
                     <div class="step-number">1</div>
-                    <div class="feature-icon" aria-hidden="true">📺</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-monitor-play"></i></div>
                     <h5 class="fw-bold">Pick a channel</h5>
                     <p class="text-muted-brand">Enter a YouTube @@handle, channel URL, or channel ID. Each alarm can have its own channel.</p>
                 </div>
@@ -49,7 +73,7 @@
             <div class="col-md-4">
                 <div class="step-card feature-card">
                     <div class="step-number">2</div>
-                    <div class="feature-icon" aria-hidden="true">⏰</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-alarm-clock"></i></div>
                     <h5 class="fw-bold">Set your alarm</h5>
                     <p class="text-muted-brand">Choose the time, select which days, and fine-tune playback settings like volume, replays, and rising volume.</p>
                 </div>
@@ -57,7 +81,7 @@
             <div class="col-md-4">
                 <div class="step-card feature-card">
                     <div class="step-number">3</div>
-                    <div class="feature-icon" aria-hidden="true">🌅</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-sunrise"></i></div>
                     <h5 class="fw-bold">Wake up inspired</h5>
                     <p class="text-muted-brand">When your alarm fires, the latest Short plays full-screen — even over your lock screen. Snooze with smart progressive timing or dismiss.</p>
                 </div>
@@ -67,135 +91,156 @@
 </section>
 
 <!-- ===== FEATURES ===== -->
-<section id="features">
+<section id="features" class="reveal">
     <div class="container">
         <h2 class="section-title text-center">Features<span class="accent-dot">.</span></h2>
-        <div class="row g-4">
+
+        <!-- Hero Features -->
+        <div class="row g-4 mb-5">
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🎯</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-crosshair"></i></div>
                     <h5 class="fw-bold">Smart Video Selection</h5>
                     <p class="text-muted-brand mb-0">Automatically finds the newest embeddable Short from your chosen channel.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">⚙️</div>
-                    <h5 class="fw-bold">Per-Alarm Customization <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
-                    <p class="text-muted-brand mb-0">Different channel, volume, replays, and duration for each alarm.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🔒</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-shield-check"></i></div>
                     <h5 class="fw-bold">Reliable Delivery</h5>
                     <p class="text-muted-brand mb-0">Uses Android's exact alarm API — survives Doze mode and reboots.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🔊</div>
-                    <h5 class="fw-bold">Rising Volume <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-moon-star"></i></div>
+                    <h5 class="fw-bold">Sleep Timer</h5>
+                    <p class="text-muted-brand mb-0">Fall asleep to a YouTube video with a countdown timer. Volume fades gradually and curated sleep videos are suggested.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customize Every Alarm -->
+        <p class="feature-category-title"><i class="lucide-settings" style="font-size: 1rem; margin-right: 0.4rem;"></i> Customize Every Alarm</p>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-sliders-horizontal"></i></div>
+                    <h5 class="fw-bold">Per-Alarm Customization <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">Different channel, volume, replays, and duration for each alarm.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-volume-2"></i></div>
+                    <h5 class="fw-bold">Rising Volume <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
                     <p class="text-muted-brand mb-0">Gentle wake-up: volume ramps from whisper to full over 30 seconds.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">📋</div>
-                    <h5 class="fw-bold">Playlist Mode <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-list-video"></i></div>
+                    <h5 class="fw-bold">Playlist Mode <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
                     <p class="text-muted-brand mb-0">Play multiple Shorts in sequence — skip blocked videos automatically.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">�</div>
-                    <h5 class="fw-bold">Interval Scheduling <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
-                    <p class="text-muted-brand mb-0">Schedule alarms every X days from a start date — perfect for reminders that don't follow a weekly pattern.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🏷️</div>
-                    <h5 class="fw-bold">Alarm Labels</h5>
-                    <p class="text-muted-brand mb-0">Name your alarms so you know exactly why they're going off. Labels display on the alarm screen.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">🎬</div>
-                    <h5 class="fw-bold">Specific Video <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-clapperboard"></i></div>
+                    <h5 class="fw-bold">Specific Video <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
                     <p class="text-muted-brand mb-0">Paste a YouTube URL to wake up to an exact video instead of a random Short from the channel.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">�</div>
-                    <h5 class="fw-bold">Smart Snooze <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-tag"></i></div>
+                    <h5 class="fw-bold">Alarm Labels</h5>
+                    <p class="text-muted-brand mb-0">Name your alarms so you know exactly why they're going off. Labels display on the alarm screen.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-calendar-range"></i></div>
+                    <h5 class="fw-bold">Interval Scheduling <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">Schedule alarms every X days from a start date — perfect for reminders that don't follow a weekly pattern.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stay Accountable -->
+        <p class="feature-category-title"><i class="lucide-target" style="font-size: 1rem; margin-right: 0.4rem;"></i> Stay Accountable</p>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-alarm-clock-minus"></i></div>
+                    <h5 class="fw-bold">Smart Snooze <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
                     <p class="text-muted-brand mb-0">Configurable snooze duration that progressively shortens each time — nudging you awake faster.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">📅</div>
-                    <h5 class="fw-bold">Skip Dates</h5>
-                    <p class="text-muted-brand mb-0">Mark holidays or days off so your alarm silently skips — no need to toggle anything.</p>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-lock-keyhole"></i></div>
+                    <h5 class="fw-bold">Dismiss Challenges <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">Force yourself awake with QR code scanning, math problems, or shake-to-dismiss challenges. Configurable shake count from 5 to 50.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">📊</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-bar-chart-3"></i></div>
                     <h5 class="fw-bold">Streak &amp; Stats</h5>
                     <p class="text-muted-brand mb-0">Track your alarm streak, weekly count, snooze rate, and average snoozes on the dashboard.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">👆</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-calendar-off"></i></div>
+                    <h5 class="fw-bold">Skip Dates</h5>
+                    <p class="text-muted-brand mb-0">Mark holidays or days off so your alarm silently skips — no need to toggle anything.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-hand"></i></div>
                     <h5 class="fw-bold">Swipe Gestures</h5>
                     <p class="text-muted-brand mb-0">Swipe down to dismiss, swipe left to snooze — fast controls when you're half asleep. Toggle on or off in settings.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🧪</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-flask-conical"></i></div>
                     <h5 class="fw-bold">Test Alarm</h5>
                     <p class="text-muted-brand mb-0">Preview the full alarm experience before you rely on it — test from settings anytime.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Built for Peace of Mind -->
+        <p class="feature-category-title"><i class="lucide-heart" style="font-size: 1rem; margin-right: 0.4rem;"></i> Built for Peace of Mind</p>
+        <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">😴</div>
-                    <h5 class="fw-bold">Sleep Timer</h5>
-                    <p class="text-muted-brand mb-0">Fall asleep to a YouTube video with a countdown timer. Volume fades gradually and curated sleep videos are suggested.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🔓</div>
-                    <h5 class="fw-bold">Dismiss Challenges <span class="badge bg-accent-subtle text-accent small">Pro</span></h5>
-                    <p class="text-muted-brand mb-0">Force yourself awake with QR code scanning, math problems, or shake-to-dismiss challenges. Configurable shake count from 5 to 50.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">☁️</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-cloud-upload"></i></div>
                     <h5 class="fw-bold">Auto Backup</h5>
                     <p class="text-muted-brand mb-0">Alarms and settings are backed up automatically via Android. Reinstall and pick up where you left off.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🌙</div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-moon"></i></div>
                     <h5 class="fw-bold">Dark Mode</h5>
                     <p class="text-muted-brand mb-0">Switch between System, Light, and Dark themes. Your preference is saved and applied instantly.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">                <div class="feature-card">                    <div class="feature-icon" aria-hidden="true">💡</div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-lightbulb"></i></div>
                     <h5 class="fw-bold">Channel Suggestions</h5>
                     <p class="text-muted-brand mb-0">Not sure which channel to pick? Curated suggestions help you discover great wake-up content.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">�🛡️</div>
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-shield"></i></div>
                     <h5 class="fw-bold">Privacy First</h5>
                     <p class="text-muted-brand mb-0">No accounts. No tracking. No ads. All data stays on your device.</p>
                 </div>
@@ -205,7 +250,7 @@
 </section>
 
 <!-- ===== SCREENSHOTS ===== -->
-<section id="screenshots">
+<section id="screenshots" class="reveal">
     <div class="container">
         <h2 class="section-title text-center">See It in Action<span class="accent-dot">.</span></h2>
 
@@ -214,134 +259,136 @@
             <button type="button" class="theme-toggle-btn" data-theme="light" aria-pressed="false">☀️ Light</button>
         </div>
 
-        <div class="screenshot-scroll" id="screenshots-dark">
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/01-dashboard-dark.png" alt="Alarm dashboard in dark mode with sleep timer button, multiple alarms with labels, toggle switches, and next fire times" loading="lazy" />
+        <div class="screenshot-carousel" id="screenshots-dark">
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/01-dashboard-dark.png" alt="Alarm dashboard in dark mode with sleep timer button, multiple alarms with labels, toggle switches, and next fire times" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/02-sleep-timer-dark.png" alt="Sleep timer dialog with duration slider, volume control, gradually lower volume checkbox, and curated sleep video suggestions" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Sleep Timer</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/03-dashboard-history-dark.png" alt="Dashboard scrolled to show interval alarm, Your Week stats with streak and alarm count, and recent alarm history" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Stats &amp; History</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/04-statistics-dark.png" alt="Statistics screen with summary stats, last 7 days bar chart, most used alarms, and average wake time" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Statistics</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/09-edit-alarm-schedule-dark.png" alt="Edit alarm screen with label, time picker, day selection chips, Every X days option, skip dates, and playback overrides" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/10-edit-alarm-skip-dates-dark.png" alt="Edit alarm with Every X days interval scheduling expanded, skip dates section with Add date button" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Skip Dates</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/13-edit-alarm-sliders-dark.png" alt="Per-alarm playback overrides with volume, vibration, rising volume, max snoozes sliders, and dismiss challenge dropdown" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Playback &amp; Challenges</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/14-edit-alarm-challenge-dark.png" alt="Dismiss challenge dropdown showing None, Math problem, Shake phone, and Scan QR code options" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Dismiss Challenges</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/16-alarm-player-dark.png" alt="Alarm playing full-screen with YouTube Short video, channel name, alarm label, loop counter, retry, dismiss, and snooze buttons" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
+                    </div>
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
             </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/02-sleep-timer-dark.png" alt="Sleep timer dialog with duration slider, volume control, gradually lower volume checkbox, and curated sleep video suggestions" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Sleep Timer</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/03-dashboard-history-dark.png" alt="Dashboard scrolled to show interval alarm, Your Week stats with streak and alarm count, and recent alarm history" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Stats &amp; History</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/04-statistics-dark.png" alt="Statistics screen with summary stats, last 7 days bar chart, most used alarms, and average wake time" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Statistics</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/09-edit-alarm-schedule-dark.png" alt="Edit alarm screen with label, time picker, day selection chips, Every X days option, skip dates, and playback overrides" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/10-edit-alarm-skip-dates-dark.png" alt="Edit alarm with Every X days interval scheduling expanded, skip dates section with Add date button" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Skip Dates</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/13-edit-alarm-sliders-dark.png" alt="Per-alarm playback overrides with volume, vibration, rising volume, max snoozes sliders, and dismiss challenge dropdown" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Playback &amp; Challenges</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/14-edit-alarm-challenge-dark.png" alt="Dismiss challenge dropdown showing None, Math problem, Shake phone, and Scan QR code options" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Dismiss Challenges</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/16-alarm-player-dark.png" alt="Alarm playing full-screen with YouTube Short video, channel name, alarm label, loop counter, retry, dismiss, and snooze buttons" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
-            </div>
+            <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot"><i class="lucide-chevron-left"></i></button>
+            <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot"><i class="lucide-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
         </div>
 
-        <div class="screenshot-scroll d-none" id="screenshots-light">
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/12-dashboard-light.png" alt="Alarm dashboard in light mode with blue accent colors, Material 3 cards, and Your Week stats" loading="lazy" />
+        <div class="screenshot-carousel d-none" id="screenshots-light">
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/12-dashboard-light.png" alt="Alarm dashboard in light mode with blue accent colors, Material 3 cards, and Your Week stats" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/13-dashboard-disabled-light.png" alt="Dashboard in light mode with a disabled alarm dimmed to indicate it is turned off" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Disabled Alarm</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/14-edit-alarm-schedule-light.png" alt="Edit alarm screen in light mode with schedule card, day chips, skip dates, playback overrides, test and save buttons" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/15-edit-alarm-overrides-light.png" alt="Edit alarm in light mode with skip dates expanded and playback overrides showing video URL, channel override, and sliders" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Skip Dates &amp; Overrides</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/16-edit-alarm-sliders-light.png" alt="Per-alarm playback sliders in light mode with replays, videos per alarm, duration, volume, vibration, rising volume, and max snoozes" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Playback Controls</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/17-settings-playback-light.png" alt="Settings screen in light mode with channel handle, max video length, player volume, max replays, videos per alarm, vibration, and swipe gestures" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Playback Settings</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/18-settings-snooze-light.png" alt="Settings screen with max snoozes, snooze duration, progressive snooze toggle, snooze reduction slider, and fallback alarm sound" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Smart Snooze</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/19-settings-permissions-light.png" alt="Settings screen showing permissions status, display over other apps, and data actions including test alarm, export, and import configuration" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Permissions &amp; Data</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/20-settings-theme-light.png" alt="Settings screen showing theme toggle with System, Light, and Dark options, privacy links, and app version" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Theme &amp; About</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="phone-mockup"><img src="~/images/screenshots/21-alarm-player-light.png" alt="Alarm playing full-screen in light mode with YouTube Short video, dismiss and snooze buttons" loading="lazy" /></div>
+                        <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
+                    </div>
                 </div>
-                <p class="text-center text-muted-brand mt-2 small">Dashboard</p>
             </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/13-dashboard-disabled-light.png" alt="Dashboard in light mode with a disabled alarm dimmed to indicate it is turned off" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Disabled Alarm</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/14-edit-alarm-schedule-light.png" alt="Edit alarm screen in light mode with schedule card, day chips, skip dates, playback overrides, test and save buttons" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Edit Alarm</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/15-edit-alarm-overrides-light.png" alt="Edit alarm in light mode with skip dates expanded and playback overrides showing video URL, channel override, and sliders" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Skip Dates &amp; Overrides</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/16-edit-alarm-sliders-light.png" alt="Per-alarm playback sliders in light mode with replays, videos per alarm, duration, volume, vibration, rising volume, and max snoozes" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Playback Controls</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/17-settings-playback-light.png" alt="Settings screen in light mode with channel handle, max video length, player volume, max replays, videos per alarm, vibration, and swipe gestures" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Playback Settings</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/18-settings-snooze-light.png" alt="Settings screen with max snoozes, snooze duration, progressive snooze toggle, snooze reduction slider, and fallback alarm sound" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Smart Snooze</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/19-settings-permissions-light.png" alt="Settings screen showing permissions status, display over other apps, and data actions including test alarm, export, and import configuration" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Permissions &amp; Data</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/20-settings-theme-light.png" alt="Settings screen showing theme toggle with System, Light, and Dark options, privacy links, and app version" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Theme &amp; About</p>
-            </div>
-            <div class="screenshot-item">
-                <div class="phone-mockup">
-                    <img src="~/images/screenshots/21-alarm-player-light.png" alt="Alarm playing full-screen in light mode with YouTube Short video, dismiss and snooze buttons" loading="lazy" />
-                </div>
-                <p class="text-center text-muted-brand mt-2 small">Alarm Playing</p>
-            </div>
+            <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot"><i class="lucide-chevron-left"></i></button>
+            <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot"><i class="lucide-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
         </div>
     </div>
 </section>
 
 <!-- ===== TECH HIGHLIGHTS ===== -->
-<section id="tech">
-    <div class="container text-center">
-        <h2 class="section-title">Built Right<span class="accent-dot">.</span></h2>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-            @foreach (var badge in new[] { "Material Design 3", "Android 10+", "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Interval & Weekly Scheduling", "Foldable & Tablet Support", "Smart Snooze", "Sleep Timer", "Dismiss Challenges", "Streak & Stats", "Dark Mode", "60+ Unit Tests", "Zero Tracking SDKs" })
+<section id="tech" class="reveal">
+    <div class="container">
+        <h2 class="section-title text-center">Built Right<span class="accent-dot">.</span></h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+                <div class="tech-stat">
+                    <div class="stat-value">60+</div>
+                    <div class="stat-label">Unit Tests</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Tracking SDKs</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-stat">
+                    <div class="stat-value">10+</div>
+                    <div class="stat-label">Android Versions</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-stat">
+                    <div class="stat-value">M3</div>
+                    <div class="stat-label">Material Design</div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+            @foreach (var badge in new[] { "Encrypted Storage", "YouTube Data API v3", "Export/Import", "Auto Backup", "Foldable & Tablet Support", "Smart Snooze", "Sleep Timer", "Dismiss Challenges" })
             {
                 <span class="tech-badge">@badge</span>
             }
@@ -350,7 +397,7 @@
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq">
+<section id="faq" class="reveal">
     <div class="container">
         <h2 class="section-title text-center">Frequently Asked Questions<span class="accent-dot">.</span></h2>
         <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
@@ -499,7 +546,7 @@
         <form method="post" asp-page-handler="Signup" class="signup-form mx-auto">
             <div class="input-group">
                 <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
-                <button type="submit" class="btn btn-cta">Notify Me</button>
+                <button type="submit" class="btn btn-cta">Get Early Access</button>
             </div>
             <span asp-validation-for="Input.Email" class="text-danger small"></span>
         </form>
@@ -513,7 +560,11 @@
             <div class="alert alert-danger alert-signup mx-auto mt-3" role="alert">@TempData["SignupError"]</div>
         }
 
-        <p class="text-muted-brand mt-4">Free to start. No ads. No tracking. No account required. One-time Pro upgrade available.</p>
+        <div class="trust-icons d-flex justify-content-center gap-4 mt-3 text-muted-brand small">
+            <span><i class="lucide-shield"></i> No spam</span>
+            <span><i class="lucide-eye-off"></i> No tracking</span>
+            <span><i class="lucide-gift"></i> Free to start</span>
+        </div>
     </div>
 </section>
 

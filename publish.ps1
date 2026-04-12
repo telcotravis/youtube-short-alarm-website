@@ -16,9 +16,9 @@ $ErrorActionPreference = "Stop"
 $projectDir = Join-Path $PSScriptRoot "YTShortsAlarm.Web"
 $publishDir = Join-Path $PSScriptRoot "publish"
 
-# --- Step 1: Build & Publish ---
-Write-Host "`n=== Building and publishing ===" -ForegroundColor Cyan
-dotnet publish $projectDir -c Release -o $publishDir --nologo
+# --- Step 1: Build & Publish (self-contained for shared hosting) ---
+Write-Host "`n=== Building and publishing (win-x64, self-contained) ===" -ForegroundColor Cyan
+dotnet publish $projectDir -c Release -o $publishDir --nologo -r win-x64 --self-contained true
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Build failed!" -ForegroundColor Red
     exit 1
@@ -52,19 +52,13 @@ $plainPassword = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
 # --- Step 4: Deploy via MSDeploy ---
 Write-Host "Deploying..." -ForegroundColor Yellow
 
-$msdeployArgs = @(
-    "-verb:sync",
-    "-source:contentPath='$publishDir'",
-    "-dest:contentPath='$SiteName',computerName='$PublishUrl?site=$SiteName',userName='$Username',password='$plainPassword',authType='Basic'",
-    "-allowUntrusted",
-    "-enableRule:AppOffline",
-    "-retryAttempts:2"
-)
+$destArg = "-dest:contentPath='$SiteName',computerName='$PublishUrl`?site=$SiteName',userName='$Username',password='$plainPassword',authType='Basic'"
 
-& $msdeploy @msdeployArgs
+$argString = "-verb:sync -source:contentPath=`"$publishDir`" $destArg -allowUntrusted -enableRule:AppOffline -retryAttempts:2 -skip:objectName=dirPath,absolutePath=App_Data -skip:objectName=filePath,absolutePath=App_Data"
 
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "`nDeploy failed!" -ForegroundColor Red
+$proc = Start-Process -FilePath $msdeploy -ArgumentList $argString -NoNewWindow -Wait -PassThru
+if ($proc.ExitCode -ne 0) {
+    Write-Host "`nDeploy failed! (exit code $($proc.ExitCode))" -ForegroundColor Red
     exit 1
 }
 

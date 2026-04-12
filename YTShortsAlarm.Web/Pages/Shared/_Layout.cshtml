@@ -38,6 +38,12 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="~/css/site.css" />
 
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.min.css" />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/hero-banner.jpg" />
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -107,22 +113,27 @@
     <!-- Footer -->
     <footer class="py-5 mt-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-start">
                 <div class="col-md-4 mb-3">
-                    <p class="text-muted-brand mb-0">&copy; 2026 Kardsen. All rights reserved.</p>
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="~/images/app-icon.png" alt="" width="24" height="24" class="me-2 rounded" />
+                        <span class="fw-bold">YT Shorts Alarm</span>
+                    </div>
+                    <p class="text-muted-brand mb-0 small">&copy; 2026 Kardsen. All rights reserved.</p>
                 </div>
                 <div class="col-md-4 mb-3 text-md-center">
                     <a asp-page="/Privacy">Privacy Policy</a>
+                    <span class="text-muted-brand mx-2">|</span>
+                    <a asp-page="/Guide">Guide</a>
                     <span class="text-muted-brand mx-2">|</span>
                     <a href="mailto:support@kardsen.com">Contact</a>
                 </div>
                 <div class="col-md-4 mb-3 text-md-end">
                     <small class="text-muted-brand d-block">
-                        This app uses YouTube API Services. By using this app you agree to be bound by the
-                        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube Terms of Service</a>.
+                        This app uses YouTube API Services.
                     </small>
                     <small class="text-muted-brand d-block mt-1">
-                        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube Terms of Service</a>
+                        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube ToS</a>
                         <span class="mx-1">|</span>
                         <a href="https://www.google.com/policies/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
                     </small>
