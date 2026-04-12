@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kardsen.ytshortsalarm",
+      "sha256_cert_fingerprints": [
+        "B3:04:FE:A2:4A:2D:4C:05:AC:64:F7:33:FE:20:28:00:1C:B9:FE:57:D9:E2:C9:78:F8:C6:5B:BA:22:32:B9:CC"
+      ]
+    }
+  }
+]

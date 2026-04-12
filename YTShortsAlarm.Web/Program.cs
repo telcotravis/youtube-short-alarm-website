@@ -58,6 +58,11 @@ app.MapGet("/download/apk", () =>
         fileDownloadName: "YTShortsAlarm.apk");
 });
 
+app.MapGet("/join", (string? group) =>
+{
+    return Results.Redirect("https://play.google.com/store/apps/details?id=com.kardsen.ytshortsalarm");
+});
+
 app.UseRouting();
 app.UseAntiforgery();
 app.MapRazorPages();
