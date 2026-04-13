@@ -53,11 +53,30 @@
         "operatingSystem": "Android 10+",
         "applicationCategory": "UtilitiesApplication",
         "description": "An alarm clock that plays the latest YouTube Short from any channel. Free, private, no ads.",
-        "offers": {
-            "@@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
+        "offers": [
+            {
+                "@@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "Free tier with 30-day Pro trial"
+            },
+            {
+                "@@type": "Offer",
+                "price": "3.99",
+                "priceCurrency": "USD",
+                "description": "Pro Monthly subscription",
+                "priceSpecification": {
+                    "@@type": "UnitPriceSpecification",
+                    "billingDuration": "P1M"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "price": "9.99",
+                "priceCurrency": "USD",
+                "description": "Founding Member Lifetime unlock"
+            }
+        ],
         "author": {
             "@@type": "Organization",
             "name": "Kardsen"
