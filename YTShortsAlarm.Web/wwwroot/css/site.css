@@ -97,10 +97,17 @@ footer a:hover {
 }
 
 #hero img {
-    max-height: 600px;
-    width: auto;
+    max-height: 800px;
+    width: 100%;
     max-width: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    #hero img {
+        max-height: none;
+        max-width: 100%;
+    }
 }
 
 #hero h1 {
@@ -645,4 +652,54 @@ html {
     font-size: 0.8rem;
     color: var(--color-text-muted);
     margin-bottom: 0;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6);
+    animation: lightbox-in 0.25s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 1;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+@keyframes lightbox-in {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }

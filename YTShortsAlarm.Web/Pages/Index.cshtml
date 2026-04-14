@@ -45,11 +45,17 @@
 
             </div>
             <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                <img src="~/images/hero-banner.jpg" alt="YT Shorts Alarm — your morning, powered by fresh video" class="img-fluid rounded-4 shadow-lg" loading="eager" />
+                <img src="~/images/hero-banner.jpg" alt="YT Shorts Alarm — your morning, powered by fresh video" class="img-fluid rounded-4 shadow-lg hero-lightbox-trigger" loading="eager" role="button" tabindex="0" aria-label="Click to enlarge hero image" style="cursor: zoom-in;" />
             </div>
         </div>
     </div>
 </section>
+
+<!-- Lightbox overlay -->
+<div id="heroLightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Enlarged hero image">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="~/images/hero-banner.jpg" alt="YT Shorts Alarm — your morning, powered by fresh video" class="lightbox-img" />
+</div>
 
 <!-- ===== SOCIAL PROOF ===== -->
 <section class="py-4">
@@ -177,8 +183,8 @@
             </div>
         </div>
 
-        <!-- Stay Accountable -->
-        <p class="feature-category-title"><i class="lucide-target" style="font-size: 1rem; margin-right: 0.4rem;"></i> Stay Accountable</p>
+        <!-- Built for Heavy Sleepers -->
+        <p class="feature-category-title"><i class="lucide-alarm-clock-off" style="font-size: 1rem; margin-right: 0.4rem;"></i> Built for Heavy Sleepers</p>
         <div class="row g-4 mb-5">
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
@@ -191,9 +197,21 @@
                 <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-lock-keyhole"></i></div>
                     <h5 class="fw-bold">Dismiss Challenges <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
-                    <p class="text-muted-brand mb-0">Force yourself awake with QR code scanning, math problems, or shake-to-dismiss challenges. Configurable shake count from 5 to 50.</p>
+                    <p class="text-muted-brand mb-0">Force yourself awake with math problems, shake-to-dismiss, QR code scanning, barcode scanning, or typing challenges. Configurable difficulty and shake count.</p>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-alarm-clock-check"></i></div>
+                    <h5 class="fw-bold">Wake-Up Confirmation <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">After dismissing, a confirmation screen ensures you're actually awake — with optional motion detection and configurable timeout.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stay Accountable -->
+        <p class="feature-category-title"><i class="lucide-target" style="font-size: 1rem; margin-right: 0.4rem;"></i> Stay Accountable</p>
+        <div class="row g-4 mb-5">
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-bar-chart-3"></i></div>
@@ -220,6 +238,13 @@
                     <div class="feature-icon" aria-hidden="true"><i class="lucide-hand"></i></div>
                     <h5 class="fw-bold">Swipe Gestures</h5>
                     <p class="text-muted-brand mb-0">Swipe down to dismiss, swipe left to snooze — fast controls when you're half asleep. Toggle on or off in settings.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="lucide-archive"></i></div>
+                    <h5 class="fw-bold">Alarm Archive <span class="badge bg-accent-subtle text-accent-pro small">Pro</span></h5>
+                    <p class="text-muted-brand mb-0">Soft-delete alarms to keep their history and stats. Toggle recording on or off per alarm.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -448,7 +473,9 @@
                         <li>Specific video &amp; playlist mode</li>
                         <li>Rising volume</li>
                         <li>Smart progressive snooze</li>
-                        <li>Dismiss challenges</li>
+                        <li>Dismiss challenges (math, shake, QR, barcode, typing)</li>
+                        <li>Wake-up confirmation</li>
+                        <li>Alarm archive &amp; per-alarm stats</li>
                         <li>Interval scheduling</li>
                         <li>Import/export configuration</li>
                     </ul>
@@ -724,6 +751,21 @@
             if (bottomForm) { bottomForm.submit(); }
             return false;
         }
+
+        // Hero lightbox
+        (function () {
+            var overlay = document.getElementById('heroLightbox');
+            var trigger = document.querySelector('.hero-lightbox-trigger');
+            if (!overlay || !trigger) return;
+
+            function open() { overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+            function close() { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+
+            trigger.addEventListener('click', open);
+            trigger.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+            overlay.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        })();
     </script>
 
     <script>
