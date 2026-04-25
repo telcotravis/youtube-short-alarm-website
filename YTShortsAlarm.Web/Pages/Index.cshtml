@@ -25,23 +25,13 @@
                     <li><i class="lucide-check"></i> Survives reboots, Doze mode &amp; battery saver</li>
                 </ul>
 
-                <span class="badge fs-6 px-3 py-2 mb-4 d-inline-block" style="background: rgba(165,200,255,0.12); color: var(--color-primary); border: 1px solid rgba(165,200,255,0.25);">Launching Soon — Get Early Access</span>
-
-                <form id="heroSignupForm" class="signup-form" onsubmit="return submitHeroForm(event)">
-                    <div class="input-group">
-                        <input type="email" id="Hero_Email" class="form-control" placeholder="you@example.com" aria-label="Email address" required maxlength="256" />
-                        <button type="submit" class="btn btn-cta">Get Early Access</button>
-                    </div>
-                    <p class="small text-muted-brand mt-2 mb-0"><i class="lucide-lock" style="font-size: 0.85rem;"></i> No spam. One email on launch day.</p>
-                </form>
-                @if (TempData.Peek("SignupMessage") != null)
-                {
-                    <div class="alert alert-success alert-signup mt-3" role="alert">@TempData.Peek("SignupMessage")</div>
-                }
-                @if (TempData.Peek("SignupError") != null)
-                {
-                    <div class="alert alert-danger alert-signup mt-3" role="alert">@TempData.Peek("SignupError")</div>
-                }
+                <a href="https://play.google.com/store/apps/details?id=com.kardsen.ytshortsalarm"
+                   class="btn btn-cta btn-lg"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Download YT Shorts Alarm on Google Play">
+                    <i class="lucide-download" aria-hidden="true"></i> Download on Google Play
+                </a>
+                <p class="small text-muted-brand mt-3 mb-0"><i class="lucide-gift" style="font-size: 0.85rem;"></i> Free to try &mdash; 30-day Pro trial included</p>
 
             </div>
             <div class="col-lg-6 text-center mt-5 mt-lg-0">
@@ -713,25 +703,15 @@
     <div class="container text-center py-5">
         <h2 class="display-5 fw-bold mb-4">Ready to wake up differently?</h2>
 
-        <form method="post" asp-page-handler="Signup" class="signup-form mx-auto">
-            <div class="input-group">
-                <input type="email" asp-for="Input.Email" class="form-control" placeholder="you@example.com" aria-label="Email address" />
-                <button type="submit" class="btn btn-cta">Get Early Access</button>
-            </div>
-            <span asp-validation-for="Input.Email" class="text-danger small"></span>
-        </form>
+        <a href="https://play.google.com/store/apps/details?id=com.kardsen.ytshortsalarm"
+           class="btn btn-cta btn-lg"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Download YT Shorts Alarm on Google Play">
+            <i class="lucide-download" aria-hidden="true"></i> Download on Google Play
+        </a>
 
-        @if (TempData["SignupMessage"] != null)
-        {
-            <div class="alert alert-success alert-signup mx-auto mt-3" role="alert">@TempData["SignupMessage"]</div>
-        }
-        @if (TempData["SignupError"] != null)
-        {
-            <div class="alert alert-danger alert-signup mx-auto mt-3" role="alert">@TempData["SignupError"]</div>
-        }
-
-        <div class="trust-icons d-flex justify-content-center gap-4 mt-3 text-muted-brand small">
-            <span><i class="lucide-shield"></i> No spam</span>
+        <div class="trust-icons d-flex justify-content-center gap-4 mt-4 text-muted-brand small">
+            <span><i class="lucide-shield"></i> No ads</span>
             <span><i class="lucide-eye-off"></i> No tracking</span>
             <span><i class="lucide-gift"></i> 30-day free trial</span>
         </div>
@@ -739,19 +719,7 @@
 </section>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
     <script>
-        function submitHeroForm(e) {
-            e.preventDefault();
-            var email = document.getElementById('Hero_Email').value;
-            if (!email) return false;
-            var bottomInput = document.querySelector('#download input[name="Input.Email"]');
-            if (bottomInput) { bottomInput.value = email; }
-            var bottomForm = document.querySelector('#download form');
-            if (bottomForm) { bottomForm.submit(); }
-            return false;
-        }
-
         // Hero lightbox
         (function () {
             var overlay = document.getElementById('heroLightbox');
